@@ -1,0 +1,226 @@
+<main class="overflow-hidden mt-4 mb-2 w-11/12 m-auto">
+  <section class="bg-slate-500 rounded-lg h-[43rem] w-max m-auto">
+    <header class="p-5 text-white text-center text-3xl">Calculator</header>
+    <article class="bg-slate-300">
+      <!-- <p class="p-4 text-white text-3xl">
+        {{ firstNumber }} {{ funcT }} {{ secondNumber }}
+      </p> -->
+      <div class="px-4 py-10 text-white text-right text-3xl">
+        <span class="text-orange-500">{{ currentValue }}</span>
+      </div>
+    </article>
+    <section class="flex items-stretch bg-slate-500 h-24">
+      <div class="flex-1 px-2 py-2 w-40 text-2xl font-semibold">
+        <button
+          (click)="onClickValue('Clear', 'function')"
+          class="rounded-3xl h-20 w-44 text-blue-500 bg-slate-300 drop-shadow-xl focus:outline-none"
+        >
+          Clear
+        </button>
+      </div>
+      <div
+        class="flex-1 px-2 py-2 justify-end flex items-center text-2xl font-bold"
+      >
+        <button
+          class="rounded-3xl h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+          (click)="onClickValue('%', 'function')"
+        >
+          %
+        </button>
+      </div>
+
+      <div class="px-2 py-2 justify-end flex items-center text-2xl font-bold">
+        <button
+          (click)="onClickValue('/', 'function')"
+          class="rounded-3xl h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          ÷
+        </button>
+      </div>
+    </section>
+
+    <div class="flex items-stretch bg-slate-500 h-24">
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('7', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          7
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+          (click)="onClickValue('8', 'number')"
+        >
+          8
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+          (click)="onClickValue('9', 'number')"
+        >
+          9
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          class="rounded-3xl h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+          (click)="onClickValue('*', 'function')"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+
+    <div class="flex items-stretch bg-slate-500 h-24">
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('4', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          4
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('5', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          5
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('6', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          6
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          class="rounded-3xl h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+          (click)="onClickValue('-', 'function')"
+        >
+          -
+        </button>
+      </div>
+    </div>
+
+    <div class="flex items-stretch bg-slate-500 h-24">
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('1', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          1
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('2', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          2
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('3', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          3
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('+', 'function')"
+          class="rounded-3xl h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          +
+        </button>
+      </div>
+    </div>
+
+    <div class="flex items-stretch bg-slate-500 h-24 mb-4">
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('+', 'function')"
+          class="rounded-3xl h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          +
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('0', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-black bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          0
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-2xl font-bold"
+      >
+        <button
+          (click)="onClickValue('.', 'number')"
+          class="rounded-3xl h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          .
+        </button>
+      </div>
+
+      <div
+        class="flex-1 px-2 py-2 justify-center flex items-center text-3xl font-bold"
+      >
+        <button
+          (click)="onClickValue('=', 'function')"
+          class="rounded-full h-20 w-20 flex items-center text-blue-500 bg-slate-300 justify-center drop-shadow-xl focus:outline-none"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
